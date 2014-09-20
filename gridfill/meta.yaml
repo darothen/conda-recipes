@@ -1,0 +1,28 @@
+package:
+    name: gridfill
+    version: 0.3.0
+
+source:
+    git_url: git://github.com/ajdawson/gridfill.git
+    git_tag: v0.3.0
+
+build:
+    number: 1
+
+requirements:
+    build:
+        - python
+        - numpy
+    run:
+        - python
+        - numpy
+
+test:
+    requires:
+        - nose
+    imports:
+        - gridfill
+
+about:
+    home: http://ajdawson.github.io/gridfill/
+    license: MIT
