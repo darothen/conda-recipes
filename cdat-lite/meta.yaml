@@ -1,0 +1,31 @@
+package:
+    name: cdat-lite
+    version: 6.0rc2
+
+source:
+    fn: cdat_lite-6.0rc2.tar.gz
+    url: http://ndg.nerc.ac.uk/dist/cdat_lite-6.0rc2.tar.gz
+
+    patches:
+        - cdatlite.build.patch
+
+build:
+    number: 1
+
+requirements:
+    build:
+        - python
+        - setuptools
+        - numpy
+        - netcdf4
+    run:
+        - python
+        - numpy
+        - netcdf4
+
+test:
+    imports:
+        - cdms2
+
+about:
+    home: http://ndg.nerc.ac.uk/dist/cdat_lite-6.0rc2.tar.gz
