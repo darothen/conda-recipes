@@ -1,0 +1,1 @@
+Currently tracking development branch. Once 1.2 modifications are complete, tag that stable version and replace `git_tag` in **meta.yaml** to point to the release version.
