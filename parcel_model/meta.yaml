@@ -1,0 +1,35 @@
+package:
+    name: parcel_model
+    version: 1.2.0b1
+
+source:
+    git_url: https://www.github.com/darothen/parcel_model.git
+    git_tag: develop
+
+build:
+    number: 1
+
+    script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+    build:
+        - python
+        - cython
+        - numpy
+        - setuptools
+    run:
+        - python
+        - numpy
+        - pandas
+        - scipy
+        - assimulo
+test:
+    imports:
+        - parcel_model
+        - parcel_model.parcel
+        - parcel_model.driver
+        - parcel_model.integrator
+
+about:
+    home: http://mit.edu/~darothen/parcel_model/
+    license: New BSD (3-clause)
